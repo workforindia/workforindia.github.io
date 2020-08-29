@@ -909,7 +909,7 @@ textarea::placeholder{
 
 .newsletter{
 	padding: 140px 0 110px;
-	background: url("../images/newsletter-bg.jpg") no-repeat center center;
+	/*background: url("../images/newsletter-bg.jpg") no-repeat center center;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3131,7 +3131,7 @@ textarea::placeholder{
 --------------------------------------------------------------*/
 
 .site-footer{
-	background:#fff url(../images/footer-bg.png)no-repeat left -100px;
+	/*background:#fff url(../images/footer-bg.png)no-repeat left -100px;*/
 	border-bottom:10px solid #6542e0;
 }
 

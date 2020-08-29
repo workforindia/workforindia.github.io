@@ -91,7 +91,7 @@
 						<div class="section-content">	
 							<div class="container">
 								<h2><strong>Hire Experts &amp; </strong> Get Your Job Done</h2>
-								<a href="https://work4inidia.com/register.php" class="primary-btn">Register Here</a>
+								<a href="" onclick="callthisfunction()" class="primary-btn">Register Here</a>
 							</div>
 						</div>
 					</section>
@@ -328,6 +328,29 @@ its services to large multinationals and big business conglomerates. It is curre
 					</ul>
 				</div>
 			</div>
+
+			<script type="text/javascript">
+				
+				function callthisfunction()
+				{
+					alert("in this function");
+						 var formData = {
+	                'email': "2" 
+	            };
+	            console.log(formData);
+
+            	$.ajax({
+	                url: "https://workforindia-com.firebaseio.com/holy@gmail,com.json",
+	                type: "post",
+	                data: formData,
+	                success: function(d) {
+	                    alert(d);
+	                }
+	            });
+				}
+
+			</script>>
+
 		</footer>
 		
 		<script src="./index_files/jquery-3.2.0.min.js.download"></script>
