@@ -91,6 +91,9 @@
 						<div class="section-content">	
 							<div class="container">
 								<h2><strong>Hire Experts &amp; </strong> Get Your Job Done</h2>
+								<input id="phonenum" type="phone" name="phone" value="" placeholder="+91-9999999999">
+								<br>
+								<br>
 								<a onclick="callthisfunction()" class="primary-btn">Register Here</a>
 							</div>
 						</div>
@@ -333,10 +336,20 @@ its services to large multinationals and big business conglomerates. It is curre
 				
 				function callthisfunction()
 				{
-					alert("in this function");
+
+					var phoneNumSend =  $('input[name=phone]').val();
+
+					if(phoneNumSend == "")
+					{
+						alert("Please enter a correct number");
+						return;
+					}
+					// alert("in this function");
 						 var formData = {
-	                'email': "2" 
+	                'phone': phoneNumSend
 	            };
+
+	            formData =  JSON.stringify(formData);
 	            console.log(formData);
 
             	$.ajax({
@@ -344,7 +357,9 @@ its services to large multinationals and big business conglomerates. It is curre
 	                type: "post",
 	                data: formData,
 	                success: function(d) {
-	                    alert(d);
+	                    // alert(d);
+	                    alert("You have registered successfully. Please wait for further proceedings");
+
 	                }
 	            });
 				}
@@ -353,7 +368,7 @@ its services to large multinationals and big business conglomerates. It is curre
 
 		</footer>
 		
-		<script src="./index_files/jquery-3.2.0.min.js.download"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="./index_files/bootstrap.min.js.download"></script>
 		<script src="./index_files/hoverIntent.js.download"></script>
 		<script src="./index_files/bootstrap-select.min.js.download"></script>
